@@ -29,11 +29,11 @@ class Menus {
 	 */
 	public function settings_menu() {
 		add_submenu_page(
-			'edit.php?post_type=nextdocs-docs',
+			'edit.php?post_type=nd-docs',
 			__( 'Docs Settings', 'next-docs' ),
 			__( 'Docs Settings', 'next-docs' ),
 			'manage_options',
-			'nextdocs-settings',
+			'nd-settings',
 			array( Settings::class, 'output' )
 		);
 	}

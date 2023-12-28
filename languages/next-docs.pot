@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Next Docs 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/bappi/plugins/next-docs/\n"
-"POT-Creation-Date: 2023-12-21 11:36:31+00:00\n"
+"POT-Creation-Date: 2023-12-28 03:35:13+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,7 +28,7 @@ msgstr ""
 msgid "Go Pro"
 msgstr ""
 
-#: lib/Lib/Plugin.php:655 src/Admin/Settings.php:140
+#: lib/Lib/Plugin.php:655 src/Admin/Settings.php:83
 msgid "Documentation"
 msgstr ""
 
@@ -44,7 +44,7 @@ msgstr ""
 msgid "More Plugins"
 msgstr ""
 
-#: lib/Lib/Plugin.php:692 src/Admin/Menus.php:34 src/Admin/Menus.php:35
+#: lib/Lib/Plugin.php:692
 msgid "Settings"
 msgstr ""
 
@@ -261,33 +261,6 @@ msgstr ""
 msgid "Report a Bug"
 msgstr ""
 
-#: src/Admin/Actions.php:45
-msgid "Please enter a name for the thing."
-msgstr ""
-
-#: src/Admin/Actions.php:50
-msgid "Please select a product for the thing."
-msgstr ""
-
-#: src/Admin/Actions.php:73
-#. translators: %1$s: order edit link, %2$s: order id
-msgid ""
-"Thing has been created and created an associated order. <a "
-"href=\"%1$s\">Edit order #%2$s</a>"
-msgstr ""
-
-#: src/Admin/Actions.php:86
-#. translators: %1$s: order edit link, %2$s: order id
-msgid ""
-"Thing has been created and updated the associated order. <a "
-"href=\"%1$s\">Edit order #%2$s</a>"
-msgstr ""
-
-#: src/Admin/Actions.php:93
-#. translators: %1$s: thing edit link, %2$s: thing id
-msgid "Thing has been created. <a href=\"%1$s\">Edit thing #%2$s</a>"
-msgstr ""
-
 #: src/Admin/Admin.php:64
 #. translators: 1: Plugin name 2: WordPress
 msgid ""
@@ -304,6 +277,10 @@ msgstr ""
 msgid "Version %s"
 msgstr ""
 
+#: src/Admin/Menus.php:33 src/Admin/Menus.php:34
+msgid "Docs Settings"
+msgstr ""
+
 #: src/Admin/Settings.php:25
 msgid "General"
 msgstr ""
@@ -312,62 +289,23 @@ msgstr ""
 msgid "General settings"
 msgstr ""
 
-#: src/Admin/Settings.php:48 src/Admin/Settings.php:71
+#: src/Admin/Settings.php:48
 msgid "The following options affect how the plugin will work."
 msgstr ""
 
-#: src/Admin/Settings.php:52 src/Admin/Settings.php:75
-msgid "Example field"
+#. Plugin Name of the plugin/theme
+msgid "Next Docs"
 msgstr ""
 
-#: src/Admin/Settings.php:54 src/Admin/Settings.php:55
-#: src/Admin/Settings.php:77 src/Admin/Settings.php:78
-msgid "This is an example field."
+#: src/Admin/Settings.php:54
+msgid "Enable/Disable plugin."
 msgstr ""
 
-#: src/Admin/Settings.php:69
-msgid "Advanced settings"
+#: src/Admin/Settings.php:55
+msgid "Click to enable/disable plugin functionality."
 msgstr ""
 
-#: src/Admin/Settings.php:106
-msgid "Feature 1"
-msgstr ""
-
-#: src/Admin/Settings.php:107
-msgid "Feature 2"
-msgstr ""
-
-#: src/Admin/Settings.php:108
-msgid "Feature 3"
-msgstr ""
-
-#: src/Admin/Settings.php:109
-msgid "Feature 4"
-msgstr ""
-
-#: src/Admin/Settings.php:110
-msgid "Feature 5"
-msgstr ""
-
-#: src/Admin/Settings.php:111
-msgid "Many more ..."
-msgstr ""
-
-#: src/Admin/Settings.php:115
-msgid "Want More?"
-msgstr ""
-
-#: src/Admin/Settings.php:116
-msgid ""
-"This plugin offers a premium version which comes with the following "
-"features:"
-msgstr ""
-
-#: src/Admin/Settings.php:123
-msgid "Upgrade to PRO"
-msgstr ""
-
-#: src/Installer.php:79
+#: src/Installer.php:77
 #. translators: 1: plugin name 2: version number
 msgid "%1$s updated to version %2$s successfully."
 msgstr ""
@@ -381,40 +319,76 @@ msgstr ""
 msgid "WooCommerce"
 msgstr ""
 
-#: src/PostType/Docs.php:37
+#: src/PostType/Docs.php:39
 msgid "Add New Doc"
 msgstr ""
 
-#: src/PostType/Docs.php:38
+#: src/PostType/Docs.php:40
 msgid "New Doc"
 msgstr ""
 
-#: src/PostType/Docs.php:39
+#: src/PostType/Docs.php:41
 msgid "Edit Doc"
 msgstr ""
 
-#: src/PostType/Docs.php:40
+#: src/PostType/Docs.php:42
 msgid "View Doc"
 msgstr ""
 
-#: src/PostType/Docs.php:41
+#: src/PostType/Docs.php:43
 msgid "All Docs"
 msgstr ""
 
-#: src/PostType/Docs.php:42
+#: src/PostType/Docs.php:44
 msgid "Search Docs"
 msgstr ""
 
-#: src/PostType/Docs.php:43
+#: src/PostType/Docs.php:45
 msgid "Parent Docs:"
 msgstr ""
 
-#: src/PostType/Docs.php:44
-msgid "No tickets found."
+#: src/PostType/Docs.php:46
+msgid "No docs found."
 msgstr ""
 
-#: src/PostType/Docs.php:45
-msgid "No tickets found in Trash."
+#: src/PostType/Docs.php:47
+msgid "No docs found in Trash."
+msgstr ""
+
+#: src/PostType/Docs.php:95
+msgid "Search Categories"
+msgstr ""
+
+#: src/PostType/Docs.php:96
+msgid "All Categories"
+msgstr ""
+
+#: src/PostType/Docs.php:97
+msgid "Parent Category"
+msgstr ""
+
+#: src/PostType/Docs.php:98
+msgid "Parent Category:"
+msgstr ""
+
+#: src/PostType/Docs.php:99
+msgid "Edit Category"
+msgstr ""
+
+#: src/PostType/Docs.php:100
+msgid "Update Category"
+msgstr ""
+
+#: src/PostType/Docs.php:101
+msgid "Add New Category"
+msgstr ""
+
+#: src/PostType/Docs.php:102
+msgid "New Category Name"
+msgstr ""
+
+#: src/PostType/Docs.php:103
+msgid "Categories"
 msgstr ""
 
 #: vendor/lucatume/wp-browser/src/data/plugins/internationalized-plugin.php:11
@@ -643,10 +617,6 @@ msgstr ""
 msgid "Drag widgets here to remove them from the sidebar but keep their settings."
 msgstr ""
 
-#. Plugin Name of the plugin/theme
-msgid "Next Docs"
-msgstr ""
-
 #. Plugin URI of the plugin/theme
 msgid "https://github.com/bappi/next-docs/"
 msgstr ""
@@ -663,27 +633,37 @@ msgstr ""
 msgid "https://github.com/bappi/"
 msgstr ""
 
-#: src/PostType/Docs.php:32
+#: src/PostType/Docs.php:34
 msgctxt "post type general name"
 msgid "Docs"
 msgstr ""
 
-#: src/PostType/Docs.php:33
+#: src/PostType/Docs.php:35
 msgctxt "post type singular name"
 msgid "Doc"
 msgstr ""
 
-#: src/PostType/Docs.php:34
+#: src/PostType/Docs.php:36
 msgctxt "admin menu"
-msgid "Docs"
+msgid "Next Docs"
 msgstr ""
 
-#: src/PostType/Docs.php:35
+#: src/PostType/Docs.php:37
 msgctxt "add new on admin bar"
 msgid "Doc"
 msgstr ""
 
-#: src/PostType/Docs.php:36
+#: src/PostType/Docs.php:38
 msgctxt "ticket"
-msgid "Add New"
+msgid "Add New Doc"
+msgstr ""
+
+#: src/PostType/Docs.php:93
+msgctxt "Docs category general name"
+msgid "Categories"
+msgstr ""
+
+#: src/PostType/Docs.php:94
+msgctxt "Docs category singular name"
+msgid "Category"
 msgstr ""

@@ -20,6 +20,8 @@ class Docs {
 	 */
 	public function __construct() {
 		add_action( 'init', array( $this, 'register_cpt' ) );
+		add_filter( 'manage_nd-docs_posts_columns', array( $this, 'add_custom_column' ) );
+		add_action( 'manage_nd-docs_posts_custom_column', array( $this, 'add_custom_column_data' ), 10, 2 );
 	}
 
 	/**
@@ -31,7 +33,7 @@ class Docs {
 		$labels = array(
 			'name'               => _x( 'Docs', 'post type general name', 'next-docs' ),
 			'singular_name'      => _x( 'Doc', 'post type singular name', 'next-docs' ),
-			'menu_name'          => _x( 'Docs', 'admin menu', 'next-docs' ),
+			'menu_name'          => _x( 'Next Docs', 'admin menu', 'next-docs' ),
 			'name_admin_bar'     => _x( 'Doc', 'add new on admin bar', 'next-docs' ),
 			'add_new'            => _x( 'Add New Doc', 'ticket', 'next-docs' ),
 			'add_new_item'       => __( 'Add New Doc', 'next-docs' ),
@@ -74,19 +76,19 @@ class Docs {
 				'post-formats',
 			),
 		);
-		register_post_type( 'nextdocs-docs', apply_filters( 'nextdocs_post_type_args', $args ) );
+		register_post_type( 'nd-docs', apply_filters( 'nextdocs_post_type_args', $args ) );
 
 		// Register docs category.
 		register_taxonomy(
-			'nextdocs-docs-cat',
-			array( 'nextdocs-docs' ),
+			'nd-docs-cat',
+			array( 'nd-docs' ),
 			array(
 				'hierarchical'      => true,
 				'show_ui'           => true,
 				'show_in_rest'      => true,
 				'show_admin_column' => true,
 				'query_var'         => true,
-				'rewrite'           => array( 'slug' => 'docs-cat' ),
+				'rewrite'           => array( 'slug' => 'nd-docs-cat' ),
 				'labels'            => array(
 					'name'              => _x( 'Categories', 'Docs category general name', 'next-docs' ),
 					'singular_name'     => _x( 'Category', 'Docs category singular name', 'next-docs' ),
@@ -102,5 +104,32 @@ class Docs {
 				),
 			)
 		);
+	}
+
+
+	/**
+	 * Add custom column.
+	 *
+	 * @param array $columns All column of nd-docs.
+	 *
+	 * @since 1.0.0
+	 * @return array
+	 */
+	public function add_custom_column( $columns ) {
+		// TODO: will be implement later.
+		return $columns;
+	}
+
+	/**
+	 * Add custom column data.
+	 *
+	 * @param array $columns All column of nd-docs.
+	 * @param int   $post_id All column of nd-docs.
+	 *
+	 * @since 1.0.0
+	 * @return void
+	 */
+	public function add_custom_column_data( $columns, $post_id ) {
+		// TODO: will be implement later.
 	}
 }
